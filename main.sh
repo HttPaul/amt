@@ -1,6 +1,8 @@
 #All My Tools for deploy on cloud machine
 #Last Updated: 2021/05/23
 
+#!/bin/bash
+
 echo "AMT script initiated...Please standby..."
 echo "Installing Terminator..."
 sudo add-apt-repository ppa:gnome-terminator
