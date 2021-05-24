@@ -27,10 +27,12 @@ sudo chmod +x ./Reconbot/reconbot
 pip install bs4
 
 
-	#Config Reconbot file depndency
+#Config Reconbot file depndency
 #mkdir /usr/share/seclists
 
 
+#Move tools into folder
+sudo mv Reconbot/ ./tools/
 
 
 echo "${RED}Script Complete!"
