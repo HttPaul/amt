@@ -23,7 +23,7 @@ git clone https://github.com/0bs3ssi0n/Reconbot.git
 #Config file permissions and dependency
 echo "${RED}Config file permissions and dependency"
 sudo chmod +x ./tools/kyle_script.sh
-sudo chmod +x ./Reconbot/reconbot
+sudo chmod +x ./tools/Reconbot/reconbot
 pip install bs4
 
 
