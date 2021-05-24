@@ -3,27 +3,23 @@
 
 #!/bin/bash
 
-#Out put terminal message in red
-RED='\033[0;31m'
-
-red-text='tput setaf 1'
-white-bg='tput setab 7'
-reset='tput sgr0'
-
 #Actions sequence start
-echo "${red-text}${white-bg}AMT script initiated...Please standby...${reset}"
-echo "${red-text}${white-bg}Installing Terminator...${reset}"
+echo "$(tput setaf 1)$(tput setab 7)AMT script initiated...Please standby...${reset}"
+echo "$(tput setaf 1)$(tput setab 7)Installing Terminator...$(tput sgr0)"
 sudo add-apt-repository ppa:gnome-terminator
 sudo apt-get update
 sudo apt-get install terminator -y
-echo "${red-text}${white-bg}Terminator installed${reset}"
+echo "$(tput setaf 1)$(tput setab 7)Terminator installed$(tput sgr0)"
 
-echo "${red-text}${white-bg}Cloning Reconbot...${reset}"
+#Git clone tools
+echo "$(tput setaf 1)$(tput setab 7)Cloning Reconbot...$(tput sgr0)"
 git clone https://github.com/0bs3ssi0n/Reconbot.git
 
+#Move tools into folder
+sudo mv Reconbot/ ./tools/
 
 #Config file permissions and dependency
-echo "${red-text}${white-bg}Config file permissions and dependency${reset}"
+echo "$(tput setaf 1)$(tput setab 7)Config file permissions and dependency$(tput sgr0)"
 sudo chmod +x ./tools/kyle_script.sh
 sudo chmod +x ./tools/Reconbot/reconbot
 pip install bs4
@@ -33,8 +29,5 @@ pip install bs4
 #mkdir /usr/share/seclists
 
 
-#Move tools into folder
-sudo mv Reconbot/ ./tools/
 
-
-echo "${red-text}${white-bg}Script Complete!${reset}"
+echo "$(tput setaf 1)$(tput setab 7)Script Complete!$(tput sgr0)"
