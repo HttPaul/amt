@@ -6,22 +6,24 @@
 #Out put terminal message in red
 RED='\033[0;31m'
 
-
+red-text='tput setaf 1'
+white-bg='tput setab 7'
+reset='tput sgr0'
 
 #Actions sequence start
-echo "${RED}AMT script initiated...Please standby..."
-echo "${RED}Installing Terminator..."
+echo "${red-text}${white-bg}AMT script initiated...Please standby...${reset}"
+echo "${red-text}${white-bg}Installing Terminator...${reset}"
 sudo add-apt-repository ppa:gnome-terminator
 sudo apt-get update
 sudo apt-get install terminator -y
-echo "${RED}Terminator installed"
+echo "${red-text}${white-bg}Terminator installed${reset}"
 
-echo "${RED}Cloning Reconbot..."
+echo "${red-text}${white-bg}Cloning Reconbot...${reset}"
 git clone https://github.com/0bs3ssi0n/Reconbot.git
 
 
 #Config file permissions and dependency
-echo "${RED}Config file permissions and dependency"
+echo "${red-text}${white-bg}Config file permissions and dependency${reset}"
 sudo chmod +x ./tools/kyle_script.sh
 sudo chmod +x ./tools/Reconbot/reconbot
 pip install bs4
@@ -35,4 +37,4 @@ pip install bs4
 sudo mv Reconbot/ ./tools/
 
 
-echo "${RED}Script Complete!"
+echo "${red-text}${white-bg}Script Complete!${reset}"
